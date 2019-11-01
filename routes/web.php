@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/blogpost', 'PostController@index');
+Route::get('/page', 'PageController@index');
 
 
 Route::group(['prefix' => 'admin'], function () {

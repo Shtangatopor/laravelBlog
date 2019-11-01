@@ -1,5 +1,7 @@
 @extends('welcome')
 
+@section('title', 'Pages')
+
 @section('navigation')
     @parent
     <nav aria-label="breadcrumb">
@@ -11,6 +13,26 @@
 @endsection
 
 @section('content')
+    @foreach($pages as $page)
+        <h3>{{$page->title}}</h3>
+        <div>
+            {{$page->excerpt}}
+        </div>
+        <div>
+            {{$page->body}}
+        </div>
+        <img src="<?php echo asset("storage/$page->image")?>" class="d-block w-100" alt="...">
 
+        <div>
+            {{$page->slug}}
+        </div>
+        <div>
+            {{$page->author_id}}
+        </div>
+        <div>
+            {{$page->created_at}}
+        </div>
+
+    @endforeach
 @endsection
-<?php //var_dump($pages); ?>
+

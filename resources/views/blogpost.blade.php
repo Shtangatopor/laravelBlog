@@ -1,5 +1,7 @@
 @extends('welcome')
 
+@section('title', 'Blogpost')
+
 @section('navigation')
     @parent
     <nav aria-label="breadcrumb">

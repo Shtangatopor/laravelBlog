@@ -11,11 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController');
 
-
+Route::get('/blogpost', 'PostController@index');
+Route::get('/page/{slug}', 'PageController')->where(['slug' => '^[A-Za-z_-]+$']);
 
 
 Route::group(['prefix' => 'admin'], function () {

@@ -13,26 +13,15 @@
 @endsection
 
 @section('content')
-    @foreach($pages as $page)
-        <h3>{{$page->title}}</h3>
-        <div>
-            {{$page->excerpt}}
-        </div>
-        <div>
-            {{$page->body}}
-        </div>
-        <img src="<?php echo asset("storage/$page->image")?>" class="d-block w-100" alt="...">
 
-        <div>
-            {{$page->slug}}
-        </div>
-        <div>
-            {{$page->author_id}}
-        </div>
-        <div>
-            {{$page->created_at}}
-        </div>
+        <h3 class="text-center">{{$pages->title}}</h3>
+        excetpt:{{$pages->excerpt}}
+        bodY{{$pages->body}}
+        <img src="<?php echo asset("storage/$pages->image")?>" class="d-block w-100" alt="...">
+        {{$pages->slug}}
+        {{$pages->author_id}}
+        {{$pages->created_at}}
 
-    @endforeach
+    ololo
 @endsection
 

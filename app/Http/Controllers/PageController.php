@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use TCG\Voyager\Models\Page;
+//use TCG\Voyager\Models\Page;
+use App\Page;
 
 class PageController extends Controller
 {
-    public function index()
+        /**
+     * Show the page.
+     *
+     * @param  int  $id
+     * @return View
+     */
+    public function __invoke($id)
     {
-        $id = 1;
-        $pages = Page::get()->where( 'id', $id);
-        return view('page', ['pages' => $pages]);
+        return view('page', ['pages' => Page::findOrFail($id)]);
     }
 }

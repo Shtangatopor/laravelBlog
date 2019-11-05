@@ -40,9 +40,6 @@
             <div class="bg-light p-4">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link" href="/page">Pages</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/blogpost">Blogpost</a>
                     </li>
                     <li class="nav-item">

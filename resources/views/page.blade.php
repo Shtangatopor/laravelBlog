@@ -4,24 +4,28 @@
 
 @section('navigation')
     @parent
+    @foreach($pages as $page)
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Pages</li>
+            <li class="breadcrumb-item active" aria-current="page">{{$page->title}}</li>
         </ol>
     </nav>
+    @endforeach
 @endsection
 
 @section('content')
 
-        <h3 class="text-center">{{$pages->title}}</h3>
-        excetpt:{{$pages->excerpt}}
-        bodY{{$pages->body}}
-        <img src="<?php echo asset("storage/$pages->image")?>" class="d-block w-100" alt="...">
-        {{$pages->slug}}
-        {{$pages->author_id}}
-        {{$pages->created_at}}
+     @foreach($pages as $page)
+        <h3 class="text-center">{{$page->title}}</h3>
+        {{$page->excerpt}}
+        {{$page->body}}
+        <img src="<?php echo asset("storage/$page->image")?>" class="d-block w-100" alt="...">
+        {{$page->slug}}
+        {{$page->author_id}}
+        {{$page->created_at}}
+    @endforeach
 
-    ololo
 @endsection
 

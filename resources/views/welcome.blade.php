@@ -45,6 +45,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/blogpost">Blogpost</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/page/hello-world">HeloWorld</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/page/about-us">About us</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-//use TCG\Voyager\Models\Page;
-use App\Page;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
-        /**
+    /**
      * Show the page.
      *
-     * @param  int  $id
+     * @param string
      * @return View
      */
-    public function __invoke($id)
+    public function __invoke($slug)
     {
-        return view('page', ['pages' => Page::findOrFail($id)]);
+        $pages = DB::table('pages')->get()->where('slug', $slug);
+        return view('page', ['pages' => $pages]);
     }
 }

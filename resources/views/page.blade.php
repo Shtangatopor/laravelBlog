@@ -4,6 +4,7 @@
 
 @section('navigation')
     @parent
+    <?php $pagelist = \Illuminate\Support\Facades\DB::table('pages')->get('slug'); ?>
     @foreach($pages ?? '' as $page)
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">

@@ -4,6 +4,7 @@
 
 @section('navigation')
     @parent
+    <?php $pagelist = \Illuminate\Support\Facades\DB::table('pages')->get('slug'); ?>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>

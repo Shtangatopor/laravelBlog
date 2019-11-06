@@ -5,15 +5,15 @@
 @section('navigation')
     @parent
     <?php $pagelist = \Illuminate\Support\Facades\DB::table('pages')->get('slug'); ?>
-    @foreach($pages ?? '' as $page)
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Pages</li>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Pages</li>
+            @foreach($pages ?? '' as $page)
                 <li class="breadcrumb-item active" aria-current="page">{{$page->title}}</li>
-            </ol>
-        </nav>
-    @endforeach
+            @endforeach
+        </ol>
+    </nav>
 @endsection
 
 @section('content')

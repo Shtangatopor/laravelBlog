@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//command: php artisan route:cache
+//throw exception : Unable to prepare route [api/user] for serialization. Uses Closure.
+//so comment default route
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});

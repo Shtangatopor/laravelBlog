@@ -29,7 +29,7 @@
     @foreach($pages ?? '' as $page)
         <h3 class="text-center">{{$page->title}}</h3>
         {{$page->excerpt}}
-        {{$page->body}}
+        {!! $page->body !!}
         <img src="<?php echo asset("storage/$page->image")?>" class="d-block w-100" alt="...">
         {{$page->slug}}
         {{$page->author_id}}

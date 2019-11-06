@@ -21,7 +21,7 @@
     @foreach($posts as $post)
         <h3>{{$post->title}}</h3>
         <img src="<?php echo asset("storage/$post->image")?>" class="d-block w-100" alt="...">
-        {{$post->excerpt}} {{$post->body}}
+        {{$post->excerpt}} {!!$post->body!!}
     @endforeach
 
     <div class="mx-auto" style="width: 200px;">
